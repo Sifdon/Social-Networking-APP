@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    tools:context="com.firstapp.user.petetion.PostActivity">
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:id="@+id/insert_your_image"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/image"
+        android:layout_marginTop="30dp" />
+
+    <EditText
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:id="@+id/edit_title"
+        android:layout_below="@+id/insert_your_image"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="78dp"
+        android:hint="Title here..."
+        android:layout_marginLeft="50dp" />
+
+    <EditText
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:id="@+id/edit_description"
+        android:layout_below="@+id/edit_title"
+        android:layout_centerHorizontal="true"
+        android:hint="Description here..."
+        android:layout_marginLeft="50dp" />
+
+    <Button
+        android:gravity="center"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Submit Post"
+        android:id="@+id/button_submit"
+        android:textColor="#2f3032"
+        android:background="#e94848"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="60dp"
+        android:layout_marginLeft="50dp" />
+    <com.firstapp.user.petetion.FanMenuButtons
+        android:id="@+id/myFABSubmenu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textColor="@android:color/white"
+        android:paddingRight="@dimen/fab_submenu_margin_right"
+        android:paddingBottom="@dimen/fab_submenu_margin_bottom"
+        android:textSize="14sp"
+        app:fanMenuLabels="@array/fan_labels"
+        app:fanButtonColors="@array/button_colors"
+        app:fanLeftDrawable="@array/button_icons"
+        app:fanRememberMovedPosition="true"
+        app:fanMinBounceBackAngle="-30"
+        app:fanMaxBounceBackAngle="50"
+        android:visibility="invisible"
+        app:elevation="4dp" />
+    <android.support.design.widget.FloatingActionButton android:id="@+id/fab"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:src="@android:drawable/ic_dialog_email"
+        android:elevation="4dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/edit_description"
+        android:layout_alignEnd="@+id/edit_description"
+        app:elevation="4dp"/>
+</RelativeLayout>
